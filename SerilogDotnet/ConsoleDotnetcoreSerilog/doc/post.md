@@ -1,8 +1,9 @@
 ---
-title: Playing with serilog and aspnetcore
+title: Playing with serilog and dotnetcore
 published: true
-description: Serilog configuration via appsettings.json in aspnetcore 3.1
-tags: aspnetcore, serilog, expressions, appsettings
+description: This post includes Serilog configuration via appsettings.json in dotnet core 3.1. Also includes filtering, sub loggers and sinks.
+tags: tutorial, serilog, dotnet, csharp
+series: dotnet serilog tutorial 
 ---
 
 Logging it's a must on any application. Making a simmilitude with the [journalism](https://en.wikipedia.org/wiki/Five_Ws) when a event appears on our application,  we need to answer some questions before writing it  This is not strict at all but that i try to say is that an event alone means nothing, we need enrich it with some context. With that a log line will be more usefull:
@@ -362,7 +363,7 @@ That's all! fell free to leave a comment below!
 
 Example repository: 
 
-* [working example app](https://github.com/mandrewcito/devto/tree/master/AspnetcoreSerilog)
+* [working example app](https://github.com/mandrewcito/devto/tree/master/SerilogDotnet/ConsoleDotnetcoreSerilog)
 
 Serilog´s documentation it is enough:
 
