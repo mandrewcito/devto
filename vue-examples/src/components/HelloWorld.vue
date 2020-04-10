@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import RatingComponent from '../components/shared/rating/stars'
-import RatingDecoupledComponent from '../components/shared/rating/StarsDecoupled'
+import RatingComponent from '@/components/shared/rating/stars'
+import RatingDecoupledComponent from '@/components/shared/rating/StarsDecoupled'
 export default {
   components: {
     RatingComponent,

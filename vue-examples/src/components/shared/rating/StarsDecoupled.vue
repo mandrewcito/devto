@@ -16,7 +16,7 @@ export default {
     value: Number,
     total: Number
   },
-  data: function () {
+  data () {
     return {
       completeRange: range(0, this.value - 1),
       halfRange: range(0, this.value % 1 === 0 ? 0 : 1),
