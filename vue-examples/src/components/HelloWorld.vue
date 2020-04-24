@@ -36,14 +36,27 @@
         <font-awesome-icon slot="half" :icon="['fas', 'star-half-alt']" />
         <font-awesome-icon  slot="empty" :icon="['far', 'star']" />
     </RatingDecoupledComponent>
+    <p v-for="idx in numParagraphs" v-bind:key="idx">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper erat erat, vel molestie mauris facilisis eget. Nunc sed risus vitae metus cursus suscipit nec nec libero. Suspendisse lacinia arcu lacus, eget semper nulla sollicitudin id. Suspendisse ac lobortis ligula. Nunc dignissim ex id est mattis, quis egestas risus aliquet. Curabitur lorem tortor, feugiat et nisl congue, finibus finibus libero. Maecenas euismod velit a gravida bibendum. Maecenas faucibus felis vitae dui finibus, ornare gravida turpis suscipit.
+    </p>
+    <ScrollTopArrow></ScrollTopArrow>
   </div>
 </template>
 
 <script>
+
 import RatingComponent from '@/components/shared/rating/stars'
 import RatingDecoupledComponent from '@/components/shared/rating/StarsDecoupled'
+import ScrollTopArrow from '@/components/shared/blog/ScrollTopArrow'
+
 export default {
+  data () {
+    return {
+      numParagraphs: 10
+    }
+  },
   components: {
+    ScrollTopArrow,
     RatingComponent,
     RatingDecoupledComponent
   },
