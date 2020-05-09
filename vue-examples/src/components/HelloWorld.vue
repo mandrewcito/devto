@@ -28,37 +28,40 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+
+    <DoubleRangeSlider :min="min" :max="max" @update:min="value => min = value" @update:max="value => max = value"></DoubleRangeSlider>
+
+    <label>Min</label><input type="text" v-model="min">
+    <label>Max</label><input type="text" v-model="max">
     <RatingComponent :value=5 :total=10></RatingComponent>
     <RatingComponent :value=3.5 :total=5></RatingComponent>
 
-    <RatingDecoupledComponent :value=3.5 :total=5>
-        <font-awesome-icon  slot="filled" icon="star" />
-        <font-awesome-icon slot="half" :icon="['fas', 'star-half-alt']" />
-        <font-awesome-icon  slot="empty" :icon="['far', 'star']" />
-    </RatingDecoupledComponent>
     <p v-for="idx in numParagraphs" v-bind:key="idx">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper erat erat, vel molestie mauris facilisis eget. Nunc sed risus vitae metus cursus suscipit nec nec libero. Suspendisse lacinia arcu lacus, eget semper nulla sollicitudin id. Suspendisse ac lobortis ligula. Nunc dignissim ex id est mattis, quis egestas risus aliquet. Curabitur lorem tortor, feugiat et nisl congue, finibus finibus libero. Maecenas euismod velit a gravida bibendum. Maecenas faucibus felis vitae dui finibus, ornare gravida turpis suscipit.
     </p>
     <ScrollTopArrow></ScrollTopArrow>
+
   </div>
 </template>
 
 <script>
 
 import RatingComponent from '@/components/shared/rating/stars'
-import RatingDecoupledComponent from '@/components/shared/rating/StarsDecoupled'
 import ScrollTopArrow from '@/components/shared/blog/ScrollTopArrow'
+import DoubleRangeSlider from '@/components/shared/slider/DoubleRangeSlider'
 
 export default {
   data () {
     return {
-      numParagraphs: 10
+      numParagraphs: 10,
+      min: 0,
+      max: 10
     }
   },
   components: {
     ScrollTopArrow,
     RatingComponent,
-    RatingDecoupledComponent
+    DoubleRangeSlider
   },
   name: 'HelloWorld',
   props: {
